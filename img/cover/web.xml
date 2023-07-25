@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp">  
+   
+	<filter>
+        <filter-name>LoggerFilter</filter-name>
+        <filter-class>nc.bs.framework.server.LoggerServletFilter</filter-class>
+    </filter>
+	<context-param>
+		<param-name>org.restlet.application</param-name>
+		<param-value>uap.ws.rest.core.UAPRestJaxRsApplication</param-value>
+	</context-param>
+    <filter-mapping>
+        <filter-name>LoggerFilter</filter-name>
+        <url-pattern>/service/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+     <!--xss -->
+    <filter-mapping>
+		<filter-name>FilterChars</filter-name>
+		<url-pattern>/pages/iframe.jsp</url-pattern>
+	</filter-mapping>
+    <filter>
+		<filter-name>FilterChars</filter-name>
+		<filter-class>nc.uap.ws.page.security.FilterChars</filter-class>
+	</filter>
+
+	<!-- WS Console Servlet-->
+	<servlet>
+		<servlet-name>WSConsoleServlet</servlet-name>		
+		<servlet-class>nc.uap.ws.console.WSConsoleServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>config.xml</param-value>
+		</init-param>
+	</servlet>
+	<!-- END WS Console Servlet-->
+
+
+
+    <servlet>
+        <servlet-name>WebServiceServlet</servlet-name>
+        <servlet-class>nc.uap.ws.transport.servlet.WebServiceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WebServiceServlet</servlet-name>
+        <url-pattern>/service/*</url-pattern>
+    </servlet-mapping>
+	
+	<!--rest-->
+		<servlet>
+		<servlet-name>RestletServlet</servlet-name>
+		<servlet-class>uap.ws.rest.servlet.UAPRSServerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestletServlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RestletServletManager</servlet-name>
+		<servlet-class>uap.ws.rest.manager.RestManagerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestletServletManager</servlet-name>
+		<url-pattern>/restmanage</url-pattern>
+	</servlet-mapping>
+	<!--end-->
+	
+	
+	<!-- WS Console Servlet Maping-->
+	<servlet-mapping>
+		<servlet-name>WSConsoleServlet</servlet-name>
+		<url-pattern>*.ajax</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WSConsoleServlet</servlet-name>
+		<url-pattern>/resource/dojoroot/*</url-pattern>
+	</servlet-mapping>
+	<!--END WS Console Servlet Maping-->
+	
+    <!--@EJBREF@-->
+    <!-- ws security-->
+    <security-constraint> 
+	    <web-resource-collection>
+	    	<web-resource-name>uapws</web-resource-name>  
+			<url-pattern>/*</url-pattern> 
+			<http-method>PUT</http-method> 
+			<http-method>DELETE</http-method> 
+			<http-method>HEAD</http-method> 
+			<http-method>OPTIONS</http-method> 
+			<http-method>TRACE</http-method> 
+		</web-resource-collection> 
+		<auth-constraint> 
+		</auth-constraint> 
+	</security-constraint> 
+	<login-config> 
+		<auth-method>BASIC</auth-method> 
+	</login-config> 
+</web-app>
