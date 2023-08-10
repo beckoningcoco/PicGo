@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<module name="mcw2ncc">
+	<public>
+
+<!--  各种单据的新增和删除  -->
+		<component accessProtected="false" name="paybillAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="paybillDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+		
+<!--	业务单元 新增 修改	-->
+
+		<component accessProtected="false" name="orgAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		
+		<component accessProtected="false" name="orgEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		
+<!--	部门 新增 修改	-->
+		<component accessProtected="false" name="deptAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="deptEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		
+<!--	客户 新增 修改	-->
+		<component accessProtected="false" name="customerAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="customerEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		
+		
+<!--	供应商 新增 修改	-->
+		<component accessProtected="false" name="supplierAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="supplierEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		
+<!--	人员 增加修改	-->
+		<component accessProtected="false" name="psndocAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="psndocEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!-- 项目增加修改 -->
+		<component accessProtected="false" name="projectAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="projectEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!-- 资金新增 增删改-->
+		<component accessProtected="false" name="assetIncreaseAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+        <component accessProtected="false" name="assetIncreaseEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="assetIncreaseDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!-- 固定资产变动 新增 修改删除-->
+
+		<component accessProtected="false" name="assetChangeAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+        <component accessProtected="false" name="assetChangeEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="assetChangeDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+        <!-- 资产减少，新增 修改 删除 -->
+		<component accessProtected="false" name="assetReduceAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+        <component accessProtected="false" name="assetReduceEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="assetReduceDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+       <!-- 折旧摊销 查询-->
+		<component accessProtected="false" name="depgatherQuery" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+
+		<!--采购入库 增删改-->
+		<component accessProtected="false" name="purchaseInAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="purchaseInEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="purchaseInDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+		<!--销售出库 增删改-->
+
+		<component accessProtected="false" name="saleOutAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="saleOutEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="saleOutDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+
+		<!--材料出库 增删改-->
+		<component accessProtected="false" name="materialOutAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="materialOutEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="materialOutDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+
+		<!--其他入库 增删改-->
+		<component accessProtected="false" name="i4BillAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="i4BillEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="i4BillDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+		<!--其他出库 增删改-->
+		<component accessProtected="false" name="i7BillAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="i7BillEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="i7BillDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		
+
+		<!--应付单 增删改-->
+		<component accessProtected="false" name="payablebillAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="payablebillEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="payablebillDelete" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!--	物料档案 新增 修改	-->
+		
+		<component accessProtected="false" name="MaterialsAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="MaterialsEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!--收支项目 增修-->
+		<component accessProtected="false" name="InoutAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="InoutEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!--银行账户增修-->
+		<component accessProtected="false" name="BankAccountAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="BankAccountEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+<!--银行档案 增修-->
+		<component accessProtected="false" name="BankDocAdd" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+		<component accessProtected="false" name="BankDocEidt" remote="true" singleton="true"
+			tx="NONE">
+			<implementation>nc.bs.mcw.servlet.MCWToNccServlet</implementation>
+		</component>
+
+	</public>
+	<private>
+	</private>
+</module>
