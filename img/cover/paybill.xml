@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- 付款单管理-->
+<actions>
+	<action>
+		<name>arap.paybill.querycard</name>
+		<label>付款单管理卡片</label>
+		<clazz>nccloud.web.arap.paybill.action.QueryCardAction</clazz>
+		<btncode>Refresh</btncode>
+	</action>
+	<action>
+		<name>arap.paybill.querygridbyids</name>
+		<label>付款单管理分页根据id查询</label>
+		<clazz>nccloud.web.arap.paybill.action.QueryGridByIdsAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.queryscheme</name>
+		<label>付款单管理查询</label>
+		<clazz>nccloud.web.arap.paybill.action.QueryAction</clazz>
+		<btncode>Refresh</btncode>
+	</action>
+	<action>
+		<name>arap.paybill.cardheadafteredit</name>
+		<label>付款单管理表头编辑后事件</label>
+		<clazz>nccloud.web.arap.paybill.action.CardHeadAfterEditAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.cardbodyafteredit</name>
+		<label>付款单管理表体编辑后事件</label>
+		<clazz>nccloud.web.arap.paybill.action.CardBodyAfterEditAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.defvalue</name>
+		<label>付款单管理新增时前台默认显示值事件</label>
+		<clazz>nccloud.web.arap.paybill.action.AddDefValueAction</clazz>
+		<btncode>Add</btncode>
+	</action>
+	<action>
+		<name>arap.paybill.putopaybill</name>
+		<label>付款计划推付款单</label>
+		<clazz>nccloud.web.arap.paybill.action.PuToPaybillAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.z2topaybill</name>
+		<label>采购合同推付款单</label>
+		<clazz>nccloud.web.arap.paybill.action.Z2ToPaybillAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.fct1topaybill</name>
+		<label>付款计划推付款单</label>
+		<clazz>nccloud.web.arap.paybill.action.Fct1ToPaybillAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.querywidget</name>
+		<label>小部件跳转小应用查询</label>
+		<clazz>nccloud.web.arap.paybill.action.QueryWidgetAction</clazz>
+	</action>
+	<action>
+		<name>arap.paybill.paybillexport</name>
+		<label>付款单导出</label>
+		<clazz>nccloud.web.arap.paybill.action.PaybillExportTreeAction</clazz>
+		<btncode>ExportData</btncode>
+	</action>
+	<action>
+		<name>arap.paybill.paybillGenerateCertificate</name>
+		<label>付款单生成凭证</label>
+		<clazz>nccloud.web.arap.paybill.action.PaybillGenerateCertificateAction</clazz>
+		<btncode>gen_certificate</btncode>
+	</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</actions>
